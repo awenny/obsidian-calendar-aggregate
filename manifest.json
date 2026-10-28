@@ -3,7 +3,7 @@
   "name": "Calendar Day Aggregate",
   "version": "0.5.0",
   "minAppVersion": "1.14.5",
-  "description": "Browse dated notes and headings in a calendar with virtual daily summaries.",
+  "description": "Browse dated notes and headings in your Vault and generate virtual daily summaries.",
   "author": "Andreas Wenzel",
   "isDesktopOnly": false
 }
