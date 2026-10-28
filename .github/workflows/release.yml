@@ -1,0 +1,26 @@
+name: Release Obsidian plugin
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm install --no-audit --no-fund
+      - run: npm run check
+      - run: npm test
+      - name: Verify version matches tag
+        run: node -e "const m=require('./manifest.json'); const p=require('./package.json'); const v=require('./versions.json'); const tag=process.env.GITHUB_REF_NAME; if(m.version!==tag||p.version!==tag||v[tag]!==m.minAppVersion) process.exit(1)"
+      - run: npm run build
+      - name: Create draft release with assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "$GITHUB_REF_NAME" --draft --title "$GITHUB_REF_NAME" main.js manifest.json styles.css

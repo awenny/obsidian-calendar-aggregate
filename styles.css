@@ -1,0 +1,23 @@
+.day-aggregate-hit { border-top: 1px solid var(--background-modifier-border); padding: 1rem 0; }
+.day-aggregate-hit > a { font-size: .85em; font-weight: 600; }
+.aggregate-calendar { padding: 12px; }
+.aggregate-calendar-toolbar { display:flex; gap:8px; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.aggregate-calendar-toolbar button { padding:3px 8px; }
+.aggregate-calendar-grid { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:3px; text-align:center; }
+.aggregate-calendar-grid button { min-width:0; padding:7px 0; border-radius:5px; }
+.aggregate-calendar-grid .is-today { outline:2px solid var(--interactive-accent); }
+.aggregate-calendar-weekday { font-size:.75em; color:var(--text-muted); }
+
+/* Today and selected day are independent visual states. */
+.aggregate-calendar-grid button.is-selected {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 700;
+}
+.aggregate-calendar-grid button.is-selected:hover {
+  background: var(--interactive-accent-hover);
+}
+.aggregate-calendar-grid button.is-today.is-selected {
+  outline: 2px solid var(--text-normal);
+  outline-offset: 2px;
+}

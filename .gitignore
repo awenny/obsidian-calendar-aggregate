@@ -1,0 +1,8 @@
+node_modules/
+main.js
+main.js.map
+*.tsbuildinfo
+data.json
+.DS_Store
+.vscode/
+.idea/
