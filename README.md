@@ -1,6 +1,6 @@
 # Calendar Day Aggregate
 
-An independent Obsidian calendar plugin with virtual day summaries. **Public beta 0.4.0**.
+An independent Obsidian calendar plugin with virtual day summaries. **Public beta 0.5.0**.
 
 ## Features
 
@@ -22,11 +22,11 @@ Requires Node.js 22. Run `npm install`, `npm run check`, `npm test`, `npm run bu
 
 ## Release
 
-Update versions in `manifest.json`, `package.json`, `versions.json`, and commit a `package-lock.json` once dependencies can be installed. Commit and push to `main`. Tag the same exact version (`0.4.0`, not `v0.4.0`) and push the tag. GitHub Actions creates a **draft** release with the three installation assets; review and publish it. This is a beta; mark the GitHub release as a pre-release before publishing.
+Update versions in `manifest.json`, `package.json`, `versions.json`, and commit a `package-lock.json` once dependencies can be installed. Commit and push to `main`. Tag the same exact version (`0.5.0`, not `v0.5.0`) and push the tag. GitHub Actions creates a **draft** release with the three installation assets; review and publish it. This is a beta; mark the GitHub release as a pre-release before publishing.
 
 ## Known limitations
 
-- This is **not a source fork** of Liam Cain's Calendar plugin and does not replicate all of its features.
+- This is **not a source fork** of Liam Cain's Calendar plugin and does not replicate all of its features - but was inspired of if.
 - Vault search currently scans Markdown files when a day is opened. Large vaults may be slower.
 - The virtual summary is a rendered view, not an editable Markdown file.
 - Materialization overwrites existing files at the generated destination: use a dedicated output folder.
