@@ -35,4 +35,4 @@ Update versions in `manifest.json`, `package.json`, `versions.json`, and commit 
 
 ## License
 
-MIT. Replace `YOUR NAME` in `manifest.json` and `LICENSE` before publishing.
+MIT
